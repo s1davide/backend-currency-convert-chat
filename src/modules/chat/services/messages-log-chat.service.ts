@@ -37,6 +37,7 @@ export class MessagesService {
       }
     );
   }
+  
   getAllMessages() {
     this.connection.query(`SELECT * FROM messages;`);
   }

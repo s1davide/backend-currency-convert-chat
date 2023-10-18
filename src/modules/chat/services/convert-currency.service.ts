@@ -13,12 +13,10 @@ const consultCurrency = async () => {
 
 export const convertCurrency = async(option:string,value:string, currency:string[]) => {
   const currencyData= await consultCurrency();
+  
   if(option==="1"){
    return  (parseFloat(value)/currencyData[currency[0]]).toFixed(2)
   }else{
     return (parseFloat(value)  *currencyData[currency[0]]).toFixed(2)
   }
-    
-  
-
 };
